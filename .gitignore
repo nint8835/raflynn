@@ -16,4 +16,4 @@
 
 .idea/
 node_modules/
-wasm/
+/wasm
