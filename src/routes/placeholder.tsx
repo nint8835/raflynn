@@ -2,7 +2,7 @@ import { Themes, useThemeStore } from '../util/state';
 
 export default function Placeholder({ text = 'Placeholder' }: { text?: string }) {
     const activeTheme = useThemeStore((state) => state.activeTheme);
-    const setActiveTheme = useThemeStore((state) => state.set);
+    const setActiveTheme = useThemeStore((state) => state.setActiveTheme);
 
     let className = 'flex h-full w-full items-center justify-center font-mono text-2xl font-black';
     switch (activeTheme) {

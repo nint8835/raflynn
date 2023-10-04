@@ -6,9 +6,12 @@ export enum Themes {
     Test = 'test',
 }
 
+export type SeenThemes = { [key in Themes]: boolean };
+
 export interface ThemeState {
     activeTheme: Themes;
-    set: (theme: Themes) => void;
+    seenThemes: SeenThemes;
+    setActiveTheme: (theme: Themes) => void;
 }
 
 export const useThemeStore = create<ThemeState>()(
@@ -16,7 +19,19 @@ export const useThemeStore = create<ThemeState>()(
         persist(
             (set) => ({
                 activeTheme: Themes.Default,
-                set: (theme) => set((state) => ({ ...state, activeTheme: theme })),
+                seenThemes: {
+                    ...Object.values(Themes).reduce(
+                        (acc: SeenThemes, theme) => ({ ...acc, [theme]: false }),
+                        {} as SeenThemes,
+                    ),
+                    [Themes.Default]: true,
+                },
+                setActiveTheme: (theme) =>
+                    set(
+                        (state) => ({ activeTheme: theme, seenThemes: { ...state.seenThemes, [theme]: true } }),
+                        undefined,
+                        'setActiveTheme',
+                    ),
             }),
             {
                 name: 'theme-storage',
