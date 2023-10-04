@@ -1,4 +1,5 @@
-import { Themes, useThemeStore } from '../util/state';
+import { Themes } from '../themes/details';
+import { useThemeStore } from '../themes/state';
 
 export default function Placeholder({ text = 'Placeholder' }: { text?: string }) {
     const activeTheme = useThemeStore((state) => state.activeTheme);

@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import RouterError from './routes/error';
-import Placeholder from './routes/placeholder';
+import Root from './routes/root';
 
 const router = createBrowserRouter([
     {
         path: '/~raflynn',
-        element: <Placeholder />,
+        element: <Root />,
         errorElement: <RouterError />,
     },
 ]);

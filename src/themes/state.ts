@@ -1,10 +1,6 @@
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
-
-export enum Themes {
-    Default = 'default',
-    Test = 'test',
-}
+import { Themes } from './details';
 
 export type SeenThemes = { [key in Themes]: boolean };
 
