@@ -6,7 +6,7 @@ import Placeholder from './routes/placeholder';
 
 const router = createBrowserRouter([
     {
-        path: '/',
+        path: '/~raflynn',
         element: <Placeholder />,
         errorElement: <RouterError />,
     },
