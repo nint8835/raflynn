@@ -1,4 +1,4 @@
-import { Themes } from '../themes/details';
+import { Themes } from '../themes/definition';
 import { useThemeStore } from '../themes/state';
 
 export default function Placeholder({ text = 'Placeholder' }: { text?: string }) {

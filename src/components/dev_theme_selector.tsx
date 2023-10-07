@@ -1,7 +1,7 @@
 import { Listbox } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/24/outline';
 import { Fragment } from 'react';
-import { Themes } from '../themes/details';
+import { Themes } from '../themes/definition';
 import { useThemeStore } from '../themes/state';
 
 export default function DevThemeSelector() {

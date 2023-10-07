@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
-import { Themes } from './details';
+import { Themes } from './definition';
 
 export type SeenThemes = { [key in Themes]: boolean };
 
