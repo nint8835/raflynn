@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
-import Themes from '../../themes';
-import { useThemeStore } from '../../themes/state';
+import Themes from '@/themes';
+import { useThemeStore } from '@/themes/state';
 
 export default function RootLayout() {
     const activeThemeName = useThemeStore((state) => state.activeTheme);

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import DevThemeSelector from '../../components/dev_theme_selector';
-import ThemeDisplay from '../../components/theme_display';
-import type { RootLayoutProps } from '../definition';
+import DevThemeSelector from '@/components/dev_theme_selector';
+import ThemeDisplay from '@/components/theme_display';
+import type { RootLayoutProps } from '@/themes/definition';
 
 export function BaseRootLayout(options: { mainClasses: string }): React.FC<RootLayoutProps> {
     return function RootLayout({ children }: RootLayoutProps) {

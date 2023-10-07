@@ -1,4 +1,4 @@
-import type { ThemeDetails } from '../definition';
+import type { ThemeDetails } from '@/themes/definition';
 
 export const Details: ThemeDetails = {
     title: 'Test',
