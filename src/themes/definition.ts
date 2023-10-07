@@ -8,8 +8,13 @@ export type ThemeDetails = {
     subtitle: string;
 };
 
+export type RootLayoutProps = {
+    children: React.ReactNode;
+};
+
 export interface Theme {
     Details: ThemeDetails;
 
     ThemeDisplay: React.FC;
+    RootLayout: React.FC<RootLayoutProps>;
 }
