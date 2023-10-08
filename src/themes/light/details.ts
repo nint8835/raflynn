@@ -1,6 +1,6 @@
 import type { ThemeDetails } from '@/themes/definition';
 
 export const Details: ThemeDetails = {
-    title: 'Test',
-    subtitle: 'A testing theme',
+    title: 'Light',
+    subtitle: 'The default theme, but brighter',
 };

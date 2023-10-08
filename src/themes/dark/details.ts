@@ -1,6 +1,6 @@
 import type { ThemeDetails } from '@/themes/definition';
 
 export const Details: ThemeDetails = {
-    title: 'Default',
+    title: 'Dark',
     subtitle: 'The default theme',
 };

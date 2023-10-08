@@ -1,6 +1,6 @@
 export enum Themes {
-    Default = 'default',
-    Test = 'test',
+    Dark = 'dark',
+    Light = 'light',
 }
 
 export type ThemeDetails = {

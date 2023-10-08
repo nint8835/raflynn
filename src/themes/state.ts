@@ -16,13 +16,13 @@ export const useThemeStore = create<ThemeState>()(
     devtools(
         persist(
             (set) => ({
-                activeTheme: Themes.Default,
+                activeTheme: Themes.Dark,
                 seenThemes: {
                     ...Object.values(Themes).reduce(
                         (acc: SeenThemes, theme) => ({ ...acc, [theme]: false }),
                         {} as SeenThemes,
                     ),
-                    [Themes.Default]: true,
+                    [Themes.Dark]: true,
                 },
                 setActiveTheme: (theme) =>
                     set(
