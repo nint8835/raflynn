@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
-import { Themes } from '@/themes/definition';
+import { type Theme, Themes } from '@/themes/definition';
+import ThemeDefinitions from '@/themes';
 
 export type SeenThemes = { [key in Themes]: boolean };
 
@@ -35,3 +36,8 @@ export const useThemeStore = create<ThemeState>()(
         ),
     ),
 );
+
+export function useActiveTheme(): Theme {
+    const activeThemeName = useThemeStore((state) => state.activeTheme);
+    return ThemeDefinitions[activeThemeName];
+}
