@@ -1,10 +1,7 @@
-import { Details } from './details';
+import { BaseThemeDisplay } from '@/themes/common/theme_display';
 
-export function ThemeDisplay() {
-    return (
-        <div className="fixed bottom-4 left-4 rounded-md p-2">
-            <div className="font-bold text-zinc-300">{Details.title}</div>
-            <div className="italic text-zinc-400">{Details.subtitle}</div>
-        </div>
-    );
-}
+export const ThemeDisplay = BaseThemeDisplay({
+    containerClasses: 'bg-zinc-900',
+    titleClasses: 'text-zinc-300',
+    subtitleClasses: 'text-zinc-400',
+});

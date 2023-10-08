@@ -1,3 +1,3 @@
 import { BaseRootLayout } from '@/themes/common/root_layout';
 
-export const RootLayout = BaseRootLayout({ mainClasses: 'bg-slate-800 text-white' });
+export const RootLayout = BaseRootLayout({ mainClasses: 'bg-zinc-200 text-black' });
