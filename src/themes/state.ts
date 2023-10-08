@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
+
 import { type Theme, Themes } from '@/themes/definition';
 import ThemeDefinitions from '@/themes';
 

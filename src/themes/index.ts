@@ -1,6 +1,5 @@
 import type { Theme } from './definition';
 import { Themes } from './definition';
-
 import * as Default from './default';
 import * as Test from './test';
 
