@@ -2,8 +2,8 @@ import { Listbox } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/24/outline';
 import { Fragment } from 'react';
 
-import { useThemeStore } from '@/themes/state';
 import { Themes } from '@/themes/definition';
+import { useThemeStore } from '@/themes/state';
 
 export default function DevThemeSelector() {
     const activeTheme = useThemeStore((state) => state.activeTheme);

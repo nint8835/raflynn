@@ -1,12 +1,12 @@
+import { useEffect, useState } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { usePrefersColorScheme } from 'use-prefers-color-scheme';
-import { useEffect, useState } from 'react';
 
 import RootLayout from '@/components/layouts/root';
 import RouterError from '@/routes/error';
 import Home from '@/routes/home';
-import { useThemeStore } from '@/themes/state';
 import { Themes } from '@/themes/definition';
+import { useThemeStore } from '@/themes/state';
 
 const router = createBrowserRouter([
     {

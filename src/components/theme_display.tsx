@@ -1,7 +1,5 @@
-import { useActiveTheme } from '@/themes/state';
+import { themedComponent } from './utils';
 
-export default function ThemeDisplay() {
-    const activeTheme = useActiveTheme();
+const ThemeDisplay = themedComponent('ThemeDisplay');
 
-    return <activeTheme.ThemeDisplay />;
-}
+export default ThemeDisplay;
