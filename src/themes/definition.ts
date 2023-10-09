@@ -25,9 +25,9 @@ export type ThemeComponentProps = {
 };
 
 export interface ThemeComponents {
-    ThemeDisplay: (props: {}) => ReactNode;
-    RootLayout: (props: RootLayoutProps) => ReactNode;
-    Container: (props: ContainerProps) => ReactNode;
+    ThemeDisplay: React.FC;
+    RootLayout: React.FC<RootLayoutProps>;
+    Container: React.FC<ContainerProps>;
 }
 
 export interface ThemeMeta {
