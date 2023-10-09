@@ -12,17 +12,20 @@ export interface ThemeState {
     setActiveTheme: (theme: Themes) => void;
 }
 
+const isLight = window.matchMedia('(prefers-color-scheme: light)');
+const defaultTheme = isLight.matches ? Themes.Light : Themes.Dark;
+
 export const useThemeStore = create<ThemeState>()(
     devtools(
         persist(
             (set) => ({
-                activeTheme: Themes.Dark,
+                activeTheme: defaultTheme,
                 seenThemes: {
                     ...Object.values(Themes).reduce(
                         (acc: SeenThemes, theme) => ({ ...acc, [theme]: false }),
                         {} as SeenThemes,
                     ),
-                    [Themes.Dark]: true,
+                    [defaultTheme]: true,
                 },
                 setActiveTheme: (theme) =>
                     set(
