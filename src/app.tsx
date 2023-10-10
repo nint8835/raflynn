@@ -1,10 +1,12 @@
+import { MDXProvider } from '@mdx-js/react';
 import { useEffect, useState } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { usePrefersColorScheme } from 'use-prefers-color-scheme';
 
 import RootLayout from '@/components/layouts/root';
 import RouterError from '@/routes/error';
-import Home from '@/routes/home';
+import Index from '@/routes/index.mdx';
+import Test from '@/routes/test.mdx';
 import { Themes } from '@/themes/definition';
 import { useThemeStore } from '@/themes/state';
 
@@ -15,8 +17,12 @@ const router = createBrowserRouter([
         errorElement: <RouterError />,
         children: [
             {
-                element: <Home />,
+                element: <Index />,
                 index: true,
+            },
+            {
+                path: 'test',
+                element: <Test />,
             },
         ],
     },
@@ -46,5 +52,9 @@ export default function App() {
         }
     }, [isFirstRender]);
 
-    return <RouterProvider router={router} />;
+    return (
+        <MDXProvider>
+            <RouterProvider router={router} />
+        </MDXProvider>
+    );
 }
