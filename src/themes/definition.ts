@@ -16,16 +16,22 @@ export type ContainerProps = {
     children: React.ReactNode;
 };
 
+export type ProseProps = {
+    children: React.ReactNode;
+};
+
 export type ThemeComponentProps = {
     ThemeDisplay: {};
     RootLayout: RootLayoutProps;
     Container: ContainerProps;
+    Prose: ProseProps;
 };
 
 export interface ThemeComponents {
     ThemeDisplay: React.FC;
     RootLayout: React.FC<RootLayoutProps>;
     Container: React.FC<ContainerProps>;
+    Prose: React.FC<ProseProps>;
 }
 
 export interface ThemeMeta {
