@@ -1,4 +1,3 @@
-import { MDXProvider } from '@mdx-js/react';
 import { useEffect, useState } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { usePrefersColorScheme } from 'use-prefers-color-scheme';
@@ -52,9 +51,5 @@ export default function App() {
         }
     }, [isFirstRender]);
 
-    return (
-        <MDXProvider>
-            <RouterProvider router={router} />
-        </MDXProvider>
-    );
+    return <RouterProvider router={router} />;
 }
