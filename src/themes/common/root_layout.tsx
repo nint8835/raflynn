@@ -8,13 +8,8 @@ export function BaseRootLayout(options: { mainClasses: string }): React.FC<RootL
     return function RootLayout({ children }: RootLayoutProps) {
         return (
             <>
-                <div
-                    className={clsx(
-                        'grid h-fit min-h-screen grid-cols-1 gap-2 p-2 lg:grid-cols-2',
-                        options.mainClasses,
-                    )}
-                >
-                    {children}
+                <div className={clsx('min-h-screen', options.mainClasses)}>
+                    <div className="grid h-fit w-full grid-cols-1 gap-2 p-2 lg:grid-cols-2">{children}</div>
                 </div>
                 <ThemeDisplay />
                 {import.meta.env.MODE === 'development' && <DevThemeSelector />}
