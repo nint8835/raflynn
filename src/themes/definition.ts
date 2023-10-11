@@ -14,6 +14,7 @@ export type RootLayoutProps = {
 
 export type ContainerProps = {
     children: React.ReactNode;
+    fullWidth?: boolean;
 };
 
 export type ProseProps = {
