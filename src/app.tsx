@@ -3,6 +3,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { usePrefersColorScheme } from 'use-prefers-color-scheme';
 
 import RootLayout from '@/components/layouts/root';
+import ThemesLayout from '@/components/layouts/themes';
 import RouterError from '@/routes/error';
 import Index from '@/routes/index.mdx';
 import Test from '@/routes/test.mdx';
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
             {
                 element: <Index />,
                 index: true,
+            },
+            {
+                element: <ThemesLayout />,
+                path: 'themes',
             },
             {
                 path: 'test',

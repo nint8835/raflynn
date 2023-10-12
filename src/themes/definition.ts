@@ -6,6 +6,7 @@ export enum Themes {
 export type ThemeDetails = {
     title: string;
     subtitle: string;
+    hint: string;
 };
 
 export type RootLayoutProps = {
@@ -22,15 +23,19 @@ export type ProseProps = {
 };
 
 export type ThemeComponentProps = {
-    ThemeDisplay: {};
     RootLayout: RootLayoutProps;
+    ThemesLayout: {};
+
+    ThemeDisplay: {};
     Container: ContainerProps;
     Prose: ProseProps;
 };
 
 export interface ThemeComponents {
-    ThemeDisplay: React.FC;
     RootLayout: React.FC<RootLayoutProps>;
+    ThemesLayout: React.FC;
+
+    ThemeDisplay: React.FC;
     Container: React.FC<ContainerProps>;
     Prose: React.FC<ProseProps>;
 }
